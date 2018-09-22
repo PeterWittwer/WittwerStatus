@@ -1,0 +1,74 @@
+
+
+.profile_thumbnail img {
+    border-radius: 10px;
+    width: 30px;
+  }
+
+  #thumbnail_list_wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .thumbnail_container {
+    width: 310px;
+  padding: 5px;
+}
+
+.lg_thumbnail {
+    width: 310px;
+}
+
+
+.thumbnail_title{
+    margin: 5px;
+    text-transform: capitalize; 
+  }
+  .thumnail_img  {
+    margin: 5px;
+    
+    img {
+        width: 100%;
+  
+    }
+  }
+  
+  .thumbnail_description {
+    @extend .dark_gray_font;
+    font-size: 12px;
+    margin: 5px;  
+  }
+  .thumbnail_description span:nth-child(1) {
+      @extend .primary_bg;
+    }
+
+
+
+
+    .editable_post_thumbnail_container {
+        width: 310px;
+      padding: 5px;
+        
+        .thumnail_img img{
+        width: 100%;
+        }
+        
+        .thumbnail_title {
+            display: flex;
+            padding: 5px;
+            margin: 161px 5px 5px 5px;
+            @extend .dark_oppacity_b;
+            position: absolute;
+            width: 290px;
+            
+            div:nth-of-type(1) p  {
+            margin-right: 10px;
+            padding: 0px!important;
+            color: aqua;
+        
+            } 
+        }
+    }

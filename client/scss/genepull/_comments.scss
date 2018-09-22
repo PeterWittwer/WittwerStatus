@@ -1,0 +1,43 @@
+.comment {
+    @extend .light_gray_font; 
+  }
+  .comments_wrapper {
+    display: flex;
+    flex-direction: column;
+    border-top: solid thin #4E4D4D; 
+    padding: 10px;
+    .comment {
+      display: flex;
+      margin-bottom: 5px;
+        }
+  
+    .profile_thumbnail img {
+      //border-radius: 10px;
+      width: 40px;
+      height: 40px;
+  
+      margin: 5px;
+      }
+  
+  }
+  
+  .comment_input_wrapper {
+    margin: 5px;
+    input {
+      padding: .5em;
+      @extend .dark_gray_font;
+      border: none;
+      width: 100%;
+        font-size: 12px;
+    }
+    
+    a{
+      margin-top: 5px;
+      float: right;
+      text-decoration: underline;
+      
+      :hover {
+        cursor: pointer;
+      }
+    }
+    }

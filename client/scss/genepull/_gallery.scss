@@ -1,0 +1,28 @@
+
+.gallery_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    
+    div { 
+        width: auto;
+        height: auto;
+        margin-right: 3%;
+        margin-bottom: 20px;
+        @extend .dark_oppacity_b;
+        padding: 5px;
+    }
+    
+    img {
+        width: 170px;
+        height: 150px;
+        
+        
+    }
+    
+    .gallery_title {
+        font-size: 15px;
+        color: aqua;
+    }
+}

@@ -1,0 +1,32 @@
+
+#video_container_wrapper{
+ 
+}
+
+#video_main {
+  //width: 600px;
+  height: auto;
+  padding: 5px;
+}
+
+#video_list {
+  //display: flex;
+  flex-wrap: wrap;
+  background: NONE;
+  
+  div{
+      width: 200px;
+      height: auto;
+      margin: 5px 5px 10px 5px;
+      //@extend .dark_gray_bg;
+  }
+  
+  iframe {
+    width: 200px;
+    height: 200px;
+  } 
+  
+  h5 {
+    margin: 5px;
+  }
+}

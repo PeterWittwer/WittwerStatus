@@ -1,0 +1,136 @@
+.nav ul li {
+	display: inline-block;
+}
+
+.li-move li span {
+	color: white!important;
+}
+
+.my-tabs {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	
+	nav {
+		text-align: center;
+		vertical-align: top;
+		width: 100%;   
+
+	}
+	li {
+		padding: 0px;
+		margin: 0px;
+		@extend .dark-gray;
+		width: 12%;
+		vertical-align: top;
+    	white-space: nowrap;
+		-webkit-transition: all 0.5s;
+		transition: all 0.5s;
+		border: solid thin white;
+		//font-size: 15px;
+		}
+	.active {
+		  background: #74777b;
+	}
+		a{
+			color: white;
+    		display: block;
+		}	
+	}
+
+
+.my-tabs nav li span:hover {
+		color: white!important;
+}
+.my-tabs nav .icon:hover {
+		color: white!important;
+}
+
+
+.my-tabs nav a {
+	font-size: 1.2em!important;
+	padding-top: 5px;
+
+}
+.my-tabs nav li:hover {
+		 background: #74777b;
+		transform: scale(1.1, 1.1);
+		transform: translate(0px, -5px);
+		color: white!important;
+}
+
+
+.my-tabs li span {
+			vertical-align: middle;
+			font-size: 0.75em;
+			padding-bottom: 10px;
+			margin-right: 5px;
+		}
+
+.my-tabs li span:nth-child(1) {
+	font-size: 15px;
+}
+.my-tabs li span:nth-child(2) {
+	padding-top: 5px;
+	
+}
+
+@media screen and (max-width: 58em) {
+	.my-tabs li span:nth-child(2)  {
+		display: none;
+	}
+	.my-tabs nav a:before {
+		margin-right: 0;
+	}
+}
+
+
+
+/* SUB NAVS STYLING */
+.nav-tabs { 
+  border: 2px solid #DDD; 
+  @extend .dark-gray;
+  margin-right: 20px;
+} 
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { 
+  border-width: 0;
+  @extend .lightest-gray;
+	color: white;
+}
+
+.nav .nav-tabs .nav-justified li a { 
+  color: white; 
+	
+}
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+  border: none; 
+	color: #00aeef!important; 
+	background: transparent; 
+}
+.nav-tabs > li > a::after { 
+  	content: ""; 
+	background: #00aeef; 
+	height: 2px; 
+	position: absolute; 
+	width: 100%; 
+	left: 0px; 
+	bottom: -1px; 
+	transition: all 250ms ease 0s; 
+	transform: scale(0); 
+}
+ .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { 
+      transform: scale(1); 
+}
+.tab-nav > li > a::after { 
+  background: #282828 none repeat scroll 0% 0%; color: #fff; 
+}
+.tab-pane { 
+  padding: 0px; 
+
+}
+.tab-content{
+  padding:0px  ;
+}

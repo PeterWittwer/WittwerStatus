@@ -1,0 +1,55 @@
+@media screen and  (max-width: 990px) {
+    .chart-group, .chart-group:nth-child(1) {
+		width: 90%;} 
+	
+	
+	.sidebar-nav  {
+		margin-top: 40px;
+	}
+	
+  }// end max-width:900 media screen
+
+
+
+@media screen and (max-width: $breakpoint_mobile) {
+  .chart  {
+    li {
+      height: auto;
+      &:before {
+        color: black;
+        display: block;
+        left: 0;
+        position: relative;
+	
+	  
+      }
+      &.title {
+        &:before {
+          border-bottom: 1px solid;
+        }
+      }
+      .bar {
+        height: 23px;
+
+
+      }
+      .number {
+        display: block;
+        left: 0 !important;
+        padding-left: 0;
+        position: relative;
+        top: -8px;
+      }
+    }
+  }
+	
+	
+	.shipment-headers-wrapper {
+		flex-direction: column;
+		margin-left: 10PX;
+	}	
+	
+	
+	
+	
+}//END MEDIA SCREEN BREAKPOINT MOBILE

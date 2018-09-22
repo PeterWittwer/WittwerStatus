@@ -1,0 +1,56 @@
+
+.add-shipment-wrapper {
+  display: flex;
+  justify-content: space-around; }
+
+.add-shipment-col {
+  display: flex;
+  flex-direction: column; }
+
+.add-shipment-item {
+  margin: 10px;
+  justify-content: flex-start; }
+  
+.add-shipment-item label {
+    display: block; 
+}
+ 
+.add-cargo-wrapper {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column; }
+
+.cargo-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background: rgba(40, 44, 42, 0.8);
+  padding: 10px;
+  margin-bottom: 20px; 
+}
+
+.cargo-col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px; 
+}
+
+.add-cargo-item {
+  margin: 0px 10px 15px 0px;
+  
+}
+  .add-cargo-item label {
+    display: block; 
+}
+
+#add-shipment-btn button {
+	margin: 0px 0px 10px 0px;
+}
+
+
+
+#success {
+  margin: 15px;
+  background: #059ad1;
+  color: #a6dcf8;
+  font-size: 15px; }

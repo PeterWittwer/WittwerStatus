@@ -1,0 +1,17 @@
+
+.MyTabs {
+    @extend .dark_oppacity_a;
+    color: white;
+ }
+
+ .SubTabs {
+    //  background-color: rgba(206, 202, 202, 0.678);
+    background-color: rgba(31, 16, 241, 0.411);
+
+     margin-top: -20px;
+ }
+
+  li .active {
+     border-bottom: solid 2px rgb(243, 89, 68);
+ }
+

@@ -1,0 +1,22 @@
+#main_video_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#main_video {
+  
+}
+#playlist_feed_wrapper {
+  display: flex;
+  //justify-content: space-between;
+}
+.playlist_feed_item {
+  margin: 0px 10px 0px 10px
+}
+.video_thumbnail {
+  img {
+    width: 100px;
+  }
+}
+.video_title {
+  
+}

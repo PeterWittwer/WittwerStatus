@@ -1,0 +1,325 @@
+
+
+
+#mainWrapper {
+	margin: 20px;
+	background: white;
+	opacity: 0.7;
+		color: white;
+}
+#myNav {
+	display: flex;
+	background: BLUEVIOLET;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.navLeft {
+	width: 200px;
+	background: HOTPINK;
+}
+
+.navRight {
+	width: auto;
+	margin: 0px;
+	background: deeppink;
+	display: flex;
+	position: relative;
+	
+	ul{
+		display: inline-block!important;
+
+	}
+	li{
+		//background: #ddd;
+		color: #282828;
+		cursor: pointer;
+		display: inline;
+		margin: 0px 10px;
+		text-transform: uppercase;
+		background: yellow;
+		padding: 10px;
+		box-shadow: 0px 4px 0px black inset;
+  
+	}   
+	
+	
+}
+
+.navRight.customer1 ul li:nth-child(1)  {
+		display: none;   	 
+}
+.navRight.customer2 ul li:nth-child(3),  
+.navRight.customer2 ul li:nth-child(5)
+{  
+		display: none; 
+	 
+}
+
+.navRight.customer3 ul li:nth-child(1),  
+.navRight.customer3 ul li:nth-child(2)
+{  
+		display: none; 
+	 
+}
+
+
+
+.navRight ul li:hover {
+	color: aqua;
+	position: relative;
+}
+
+
+
+ul.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  width: auto;
+  padding: 0px;
+  background: orange;
+	
+	li{
+		display: none;
+		
+	}
+}
+
+
+.navRight li:hover > ul.drop-menu li {
+	background: ALICEBLUE;
+	display: block;
+	border: solid thin red;
+}
+
+
+/* Menu 1 */
+.navRight li:hover > ul.drop-menu.menu-1 { 
+	perspective: 1000px;
+
+li {
+	
+	@for $i from 1 through 6 {
+		&:nth-child(#{$i}) {
+	animation:  {
+		name: menu1;
+		duration: 150ms * $i;
+		//delay: (300ms * $i) - 300ms;
+		timing-function: ease-in-out;
+		fill-mode: forwards;
+		} 
+	} 
+  } 
+	} 
+
+@keyframes menu1 {
+	0%{
+		transform: rotateY(-90deg) translateY(30px);
+	}100%{
+		transform: rotateY(0deg) translateY(0px);
+	}
+}
+	
+}
+
+
+
+
+/* Menu 2 */
+.navRight li:hover > ul.drop-menu.menu-2 { 
+	perspective: 1000px;
+
+li {
+	transform-origin: top center;
+	
+	@for $i from 1 through 6 {
+		&:nth-child(#{$i}) {
+	animation:  {
+		name: menu2;
+		duration: 700ms * $i; 
+		//delay: (300ms * $i) - 300ms;
+		timing-function: ease-in-out;
+		fill-mode: forwards;
+		}  
+	} 
+  } 
+	}    
+ 
+@keyframes menu2 {
+	0%{
+		transform: rotateX(-90deg); 
+	}60% {
+		transform: rotateX(50deg); 
+	}
+	
+	100%{
+		transform: rotateX(0deg);
+	}
+}
+	
+}
+
+
+
+.navRight li:hover > ul.drop-menu.menu-2 { 
+	perspective: 1000px;
+
+}
+
+
+
+.blockArea {
+	display: flex;
+	align-items: stretch;
+	margin-top: 30px;
+
+
+}
+.leftContainer {
+	display: flex;
+	flex-grow:1;
+	background: SPRINGGREEN;
+	flex-direction: column;
+}
+
+.leftBox {
+	display: flex;
+	width: 100px;
+	height: 80px;
+	background: DARKSLATEGRAY;
+	margin: 10px auto;
+	transition-duration: .5s;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+}
+
+.leftBox:hover {
+	background: red;
+	transform: scale(1.1, 1.1);
+	transform: translate(0px, -10px)
+}
+
+
+.contentArea {
+	display: flex;
+	flex-grow: 4;
+	background: LIGHTSEAGREEN ;
+} 
+
+header {
+	font-size: 30px;
+	margin: 20px 40px;
+	text-transform: uppercase;
+	display: block;
+}
+
+section {}
+
+.cargos {
+	display: flex;
+	justify-content: space-around;
+		
+}
+.trigger {
+	transition-duration: .5s;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+}
+
+.trigger:hover {
+	cursor: pointer;
+}
+
+.item1, .item2, .item3, .item4 {
+	display: flex;
+	align-items: center;
+	width: 140px;
+	height: 140px;
+	background: BLUEVIOLET;
+	justify-content: center;
+	margin: 30px;
+	border-radius: 150px;
+	transition-duration: .5s;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+}
+
+
+.item2 {
+  animation: bounce 300ms ease-in-out 0s 1 normal forwards;
+	
+	&.show {
+		@keyframes bounce {
+		0% {
+			transform: rotateY(-90deg) translateY(30px);
+			} 
+
+
+		100%{
+			transform: rotateY(0deg)  translateY(0px);
+
+			}
+		}
+	}
+	
+}
+
+/*
+.item2 {
+	opacity: 1.0; 
+	 transition: opacity 400ms;
+	 
+    transition-delay: .8s;
+	-webkit-transition-delay: .8s;
+	-moz-transition-delay: .8s;
+	transition: transform .3s ease-in-out;
+    transform-origin: bottom;
+
+
+&.show {
+	opacity: 0.0;
+	transform:  rotateY(-90deg);
+
+	}
+}
+*/
+.service {}
+
+.service1, service2 {
+	
+}
+
+
+
+input[type="search"] {
+	height: 30px;
+	background: SILVER;
+	border-radius: 10px;
+	padding: 5px;
+	color: white;
+}
+
+
+
+@media screen and (max-width: 699px) and (min-width: 220px) {
+  .leftContainer {
+	display: flex;
+	flex-grow: 2;
+	background: red ;
+}
+.contentArea {
+	display: flex;
+	flex-grow: 4;
+	background: yellow ;
+}  
+}
+
+
+
+
+.nav ul li {
+	display: inline-block!important;
+	color: red;
+}
+

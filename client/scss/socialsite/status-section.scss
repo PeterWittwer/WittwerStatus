@@ -1,0 +1,163 @@
+.label {
+    padding: 10px!important;
+    font-size: 0.9em!important;
+    color: #282828;
+    text-transform: uppercase;
+	width: 200px!important;
+}
+
+.label:hover {
+    cursor: pointer;
+}
+
+.my-class t-body span {
+	width: 200px!important;
+}
+.status-prelim {
+    background: #FFFFCC;
+	color: #666666!important;
+
+}
+
+
+.status-planng {
+    background: #FFFF00;
+		width: 200px!important;
+
+}
+
+.status-booked {
+    background: #FFFF00;
+	color: #0000FF!important;
+	
+}
+
+.status-pckup1 {
+    background: #CCFFCC;
+}
+
+.status-reccfs {
+    background: #FF9900;
+}
+
+.status-deliv1 {
+    background: #99FF99;
+}
+
+.status-onbord {
+    background: #66CCFF;
+}
+
+.status-docdis {
+    background: #3399FF;
+}
+
+.status-arvntc {
+    background: #0066FF;
+	color: white!important;
+}
+
+.status-dschrg {
+    background: #0000FF;
+	color: #FFFF00!important;
+}
+
+.status-custen {
+    background: #FFCCFF;
+}
+
+.status-custrl {
+    background: #FF00FF;
+	color: white!important;
+}
+
+.status-onrail {
+    background: brown;
+	color: white!important;
+}
+
+.status-ogahld {
+    background: #ff7f7f;
+}
+
+.status-exmhld {
+    background: #CC6600;
+}
+
+.status-pckup2 {
+    background: #009933;
+	color: white!important;
+}
+
+.status-delvrd {
+    background: #FF0000;
+	color: white!important;
+}
+
+.status-onhold {
+    background: #CCCCCC;
+}
+
+.status-complt {
+    background: #990000;
+	color: white!important;
+}
+
+.status-cancel {
+    background: #999999;
+}
+
+
+.flow-chart icon{
+  display: inline-block;
+
+}
+
+
+.flow-chart p{
+  display: inline-block;
+
+}
+
+.status-list ul li{
+  display: inline-block;
+  float: left;
+  margin-bottom: 25px;
+}
+
+.status-list ul h3 {
+  	color: rgba(40,44,42,0.05);
+	font-size: 4em;
+    display: inline;
+
+}
+
+.status-list ul li .icon{
+  cursor: pointer;
+  font-size: 45px;
+}
+
+
+.status-list .stage-dates p{
+   color: #6D6A6A;
+   font-size: 12px;
+   margin-left: 30px;
+  // display: block;
+}
+.status-list .stage-dates p:nth-child(2) {
+  margin-left: 0px;
+}
+
+.status-list .stage-dates p span {
+	
+}
+
+
+.future-status {
+	opacity: .2;
+}
+
+.future-status:hover {
+	opacity: .8;
+}
+

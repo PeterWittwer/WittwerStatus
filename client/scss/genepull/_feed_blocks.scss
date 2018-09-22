@@ -1,0 +1,86 @@
+
+
+.feed_item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 25px 10px;
+  //border: solid thin #CFCFCF;
+  
+  
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  p, h3, h4, h5 {
+    margin: 5px;
+  }
+}
+
+.feed_item_wrapper {
+  display: flex;
+  flex-direction: column;
+   
+}
+.feed_item_tabs_wrapper {
+  display: flex;
+  //@extend .background_2;
+ // @extend .dark_oppacity_a;
+  background: white;
+
+}
+
+.feed_item_tab {
+  width: 30px;
+  height: 30px;
+    @extend .dark_oppacity_a;
+
+  margin: 2px;
+  text-align: center;
+  padding-top: 2px;
+  
+    a {
+    color: darkgray;
+  }
+  img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+span {
+    vertical-align: middle;
+}
+.feed_item_content  {
+  margin: 5px;  
+  
+  img {
+    height: 200px;
+  }
+}
+
+
+.feed_item_content .medical_post {
+    padding: 5px;
+    background: blue;
+  }
+
+// ENLARGED ITEM SECTION
+.post_category {
+  @extend .dark_gray_font;
+  display: flex;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+
+
+.post_description {
+  //background-color: rgba(20, 20, 20, 0.5);
+  
+  padding: 10px;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+
