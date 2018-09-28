@@ -26,7 +26,7 @@ import { connect } from 'react-redux';
                       </div>
                       <center><p className="lead">
                       {' '}
-                       Share projects and shipment statuses with other Wittwer Agents</p></center>
+                       Share projects and shipment statuses with other Wittwer Agents </p> </center>
                       <hr />
                       <Link to="/register" className="btn Button">Sign Up</Link>
                       <Link to="/login" className="btn Button">Login</Link>
