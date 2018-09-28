@@ -44,7 +44,7 @@ constructor() {
       <div className="row">
         <div className="col-md-8 m-auto">
           <h1 className="display-4 text-center">Sign Up</h1>
-          <p className="lead text-center">Create Your Wittwer Connect Account</p>
+          <p className="lead text-center">Create Your  Account</p>
           
           
           <center>

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {Button} from 'react-materialize';
 import ProfileHeader from './ProfileHeader';
 import ProfileAbout from './ProfileAbout';
 import ProfileCreds from './ProfileCreds';
@@ -35,16 +36,27 @@ class Profile extends Component {
         <div> 
           <div className="row"> 
             <div className="col-md-6"> 
-                <Link to="/profiles" className="btn btn-light mb-3 float-left"> 
-                Back To Profiles
-                </Link>
+            <Link to="/profiles"> 
+              <Button floating large className='CircleButton' waves='light' icon='arrow_back' />
+              </Link>
             </div>
-            <div className="col-md-6" />
+           
           </div>
 
         <ProfileHeader profile={profile} />
+
+        <div className="row">
+
+        <div className="col s12">
         <ProfileAbout profile={profile}/>
+        </div>
+
+        <div className="col s12">
         <ProfileCreds education={profile.education} experience={profile.experience}  />
+        </div>
+
+        </div>
+
         {/* {profile.githubusername ? (<ProfileGithub username={profile.githubusername} /> ) : null  } */}
 
 
@@ -55,7 +67,7 @@ class Profile extends Component {
 
     return (
       <div className="profile">
-        <div className="container"> 
+        <div className="Container"> 
           <div className="row">
             <div className="col-md-12">
               {profileContent}

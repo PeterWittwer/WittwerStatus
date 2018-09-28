@@ -23,16 +23,14 @@ class Posts extends Component {
     }
 
     return (
-      <div className="feed">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
+        <div className="Container">
+          
               <PostForm />
+              
               {postContent}
-            </div>
-          </div>
+             
+            
         </div>
-      </div>
     );
   }
 }

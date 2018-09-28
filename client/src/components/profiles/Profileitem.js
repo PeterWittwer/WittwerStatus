@@ -8,38 +8,47 @@ import isEmpty from '../../validation/is-empty';
     const { profile } = this.props;
 
     return (
-      <div className="card card-body bg-light mb-3">
-        <div className="row">
-          <div className="col-2">
-            <img style={{width: '130px'}} src={profile.user.avatar} alt="" className="rounded-circle" />
+
+
+    <div className="dark_gray z-depth-2" style={{margin: '10px'}}>
+          <div className="card-content white-text">
+
+
+        <div className="Profiles_Wrapper">
+          <div className="profile_title_box">
+            <div>
+             <img style={{width: '65px'}} src={profile.user.avatar} alt="" className="circle responsive-img" /> 
+             </div>
+             
+             <div>
+             <h5 style={{margin : '0px'}}>{profile.user.name}</h5>
+              <p style={{margin : '0px'}}>
+                {profile.status}{' '}
+                {isEmpty(profile.company) ? null : (
+                  <span>at {profile.company}</span>
+                )}
+              </p>
+              
+              <p style={{margin : '2px'}}> {isEmpty(profile.location) ? null : ( <span>{profile.location}</span> )} </p>
+              <Link to={`/profile/${profile.handle}`}> View Profile </Link>
+              
+
+             </div>
+
+            
+
           </div>
 
 
-          <div className="col-lg-6 col-md-4 col-8">
-            <h3>{profile.user.name}</h3>
-            <p>
-              {profile.status}{' '}
-              {isEmpty(profile.company) ? null : (
-                <span>at {profile.company}</span>
-              )}
-            </p>
-            <p>
-              {isEmpty(profile.location) ? null : (
-                <span>{profile.location}</span>
-              )}
-            </p>
-            <Link to={`/profile/${profile.handle}`} className="btn btn-info">
-              View Profile
-            </Link>
-          </div>
+          
 
 
 
-          <div className="col-md-4 d-none d-md-block">
-            <h4>Skill Set</h4>
-            <ul className="list-group">
+          <div style={{borderLeft: 'solid thin pink', paddingLeft: '5px', margin: '10px'}}>
+            <p style={{textTransform: 'uppercase', color: '#ff80ab'}}>Tasks</p>
+            <ul >
               {profile.skills.slice(0, 4).map((skill, index) => (
-                <li key={index} className="list-group-item">
+                <li key={index} className="" style={{display: 'inline-block', margin:'5px' }}>
                   <i className="fa fa-check pr-1" />
                   {skill}
                 </li>
@@ -47,6 +56,7 @@ import isEmpty from '../../validation/is-empty';
             </ul>
           </div>
         </div>
+      </div>
       </div>
     );
   }

@@ -7,6 +7,7 @@ import CommentFeed from './CommentFeed';
 import Spinner from '../common/Spinner';
  import { getPost } from '../../actions/postActions';
 import { Link } from 'react-router-dom';
+import {Button} from 'react-materialize';
 
  class Post extends Component {
 
@@ -23,24 +24,29 @@ import { Link } from 'react-router-dom';
     } else {
       postContent = (
         <div>
-          <PostItem post={post} showActions={false} />
           <CommentForm postId={post._id} />
-           <CommentFeed postId={post._id} comments={post.comments} />
+
+          <div className="row">
+            <div className="col s12 m4">
+              <PostItem post={post} showActions={false} />
+            </div>
+            <div className="col s12 m8">
+              <CommentFeed postId={post._id} comments={post.comments} />
+            </div>
+          </div>
+
         </div>
       );
     }
 
     return (
       <div className="post">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <Link to="/feed" className="btn btn-light mb-3">
-                Back To Feed
+        <div className="Container">
+            <Link to="/feed">
+              <Button floating large className='CircleButton' waves='light' icon='arrow_back' />
+
               </Link>
               {postContent}
-            </div>
-          </div>
         </div>
       </div>
     );

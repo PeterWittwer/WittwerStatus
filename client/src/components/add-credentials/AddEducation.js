@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Link, withRouter} from 'react-router-dom';
 import  TextFieldGroup  from '../common/TextFieldGroup';
 import  TextAreaFieldGroup  from '../common/TextAreaFieldGroup';
+import DateFieldGroup from '../common/DateFieldGroup';
+import {Button} from 'react-materialize';
+
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addEducation } from '../../actions/profileActions';
@@ -27,7 +30,7 @@ import { addEducation } from '../../actions/profileActions';
         this.onCheck = this.onCheck.bind(this);
       }
 
-
+      
 
       componentWillReceiveProps(nextProps) {
         if(nextProps.errors) {
@@ -70,13 +73,13 @@ import { addEducation } from '../../actions/profileActions';
 
     return (
         <div className="section add-education">
-        <div className="container">
+        <div className="Container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-light">
-                Go Back
+              <Link to="/dashboard">
+              <Button floating large className='CircleButton' waves='light' icon='arrow_back' />
               </Link>
-              <h1>Add Education</h1>
+              <h1 className="MainTitle">Add Education</h1>
               <p className="lead">
               Add any, bootcamp, etc. that you have attended
               </p>
@@ -106,10 +109,12 @@ import { addEducation } from '../../actions/profileActions';
                 <h6>From Date</h6>
                 <TextFieldGroup
                   name="from"
+                  placeholder="From date"
                   type="date"
                   value={this.state.from}
                   onChange={this.onChange}
                   error={errors.from}
+                  
                 />
                 <h6>To Date</h6>
                 <TextFieldGroup
@@ -118,7 +123,9 @@ import { addEducation } from '../../actions/profileActions';
                   value={this.state.to}
                   onChange={this.onChange}
                   error={errors.to}
-                  disabled={this.state.disabled ? 'disabled' : ''}
+                  disabled={this.state.disabled ? 'disabled' : ''
+
+                }
                 />
                 <div className="form-check mb-4">
                   <input
@@ -145,7 +152,7 @@ import { addEducation } from '../../actions/profileActions';
                 <input
                   type="submit"
                   value="Submit"
-                  className="btn btn-info btn-block mt-4"
+                  className="btn Button"
                 />
               </form>
             </div>

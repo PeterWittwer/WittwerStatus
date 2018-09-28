@@ -57,8 +57,8 @@ class Login extends Component {
                 <div className="container">
                 <div className="row">
                     <div className="col-md-8 m-auto">
-                    <h1 className="display-4 text-center">Log In</h1>
-                    <p className="lead text-center">Sign in to your DevConnector account</p>
+                    <h1 className="MainTitle">Log In</h1>
+                    <p className="lead text-center">Sign in to your account</p>
                     <center>
                     <form onSubmit={this.onSubmit}>
 
@@ -71,7 +71,7 @@ class Login extends Component {
                             error={errors.email}
                             />
 
-                        <div className="form-group">
+                          <div className="CustomFormInput" style={{marginTop: '20px'}}>
                         <input type="password" 
                         className={classnames('form-control form-control-lg', { 'is-invalid' : errors.password } )}  
                         placeholder="Password" 
@@ -82,7 +82,7 @@ class Login extends Component {
                         {errors.password && (<div className="invalid-feedback"> {errors.password} </div> )}
 
                         </div>
-                        <input type="submit" className="btn btn-info btn-block mt-4" />
+                        <input type="submit" className="btn Button" />
                     </form>
                     </center>
                     </div>

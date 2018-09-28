@@ -63,8 +63,12 @@ class ProfileCreds extends Component {
       </li>
     ));
     return (
+      <div>
       <div className="row">
-        <div className="col-md-6">
+        <div class="col s12 m6">
+        <div class="card indigo accent-3">
+          <div class="card-content white-text">
+
           <h3 className="text-info">Experience</h3>
           {expItems.length > 0 ? (
             <ul className="list-group">{expItems}</ul>
@@ -73,14 +77,28 @@ class ProfileCreds extends Component {
           )}
         </div>
 
-        <div className="col-md-6">
-          <h3 className="text-info">Education</h3>
-          {eduItems.length > 0 ? (
-            <ul className="list-group">{eduItems}</ul>
-          ) : (
-            <p>No Education Listed</p>
-          )}
+          </div>
         </div>
+      </div>
+
+
+
+      <div className="row">
+              <div class="col s12 m6">
+              <div class="card indigo accent-3">
+                <div class="card-content white-text">
+                <h3 className="text-info">Education</h3>
+                {eduItems.length > 0 ? (
+                  <ul className="list-group">{eduItems}</ul>
+                ) : (
+                  <p>No Education Listed</p>
+                )}
+                      </div>
+                  </div>
+            </div>
+        </div>
+
+
       </div>
     );
   }

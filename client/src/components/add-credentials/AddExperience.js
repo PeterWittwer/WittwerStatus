@@ -5,6 +5,7 @@ import  TextAreaFieldGroup  from '../common/TextAreaFieldGroup';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addExperience } from '../../actions/profileActions';
+import {Button} from 'react-materialize';
 
  class AddExperience extends Component {
 
@@ -70,13 +71,13 @@ import { addExperience } from '../../actions/profileActions';
 
     return (
         <div className="section add-experience">
-        <div className="container">
+        <div className="Container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-light">
-                Go Back
+              <Link to="/dashboard" className="btn-floating btn-large waves-effect waves-light red">
+              <Button floating large className='CircleButton' waves='light' icon='arrow_back' />
               </Link>
-              <h1>Add Your Experience</h1>
+              <h1 className="MainTitle">Add Your Experience</h1>
               <p className="lead">Add any developer/programming positions that you have had in the past</p>
               <small className="d-block pb-3">* = required field</small>
               <form onSubmit={this.onSubmit}>
@@ -143,7 +144,7 @@ import { addExperience } from '../../actions/profileActions';
                 <input
                   type="submit"
                   value="Submit"
-                  className="btn btn-info btn-block mt-4"
+                  className="btn Button"
                 />
               </form>
             </div>

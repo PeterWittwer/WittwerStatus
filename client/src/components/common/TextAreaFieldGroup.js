@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import {Button, Row, Input} from 'react-materialize';
 
 const TextAreaFieldGroup = ({
   name,
@@ -8,22 +9,32 @@ const TextAreaFieldGroup = ({
   value,
   error,
   info,
-  onChange
+  onChange,
+  label
 }) => {
   return ( 
-    <div className="form-group">
-      <textarea
-        className={classnames('form-control', {
-          'is-invalid': error
-        })}
-        placeholder={placeholder}
-        name={name}
-        value={value}
-        onChange={onChange}
-      />
+
+
+    <span>
+
+  <Input 
+  type="text" 
+  label={label} 
+  s={12} 
+  className={classnames('form-control', {
+    'is-invalid': error
+  })}
+  placeholder={placeholder}
+  name={name}
+  value={value}
+  onChange={onChange}
+  />
       {info && <small className="form-text text-muted">{info}</small>}
       {error && <div className="invalid-feedback">{error}</div>}
-    </div>
+  </span>
+
+
+
   );
 };
 
@@ -33,7 +44,9 @@ TextAreaFieldGroup.propTypes = {
   value: PropTypes.string.isRequired,
   info: PropTypes.string,
   error: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  label: PropTypes.string,
+
 };
 
 export default TextAreaFieldGroup;

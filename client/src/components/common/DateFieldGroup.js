@@ -1,8 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import {Input} from 'react-materialize'
 
-const TextFieldGroup = ({
+const DateFieldGroup = ({
   name,
   placeholder,
   value,
@@ -14,10 +15,10 @@ const TextFieldGroup = ({
   disabled
 }) => {
   return (
-    <div className="CustomFormInput">
-      <input
+    <div className="form-group">
+      <Input
         type={type}
-        className={classnames('CustomFormInput', { 
+        className={classnames('datepicker', {
           'is-invalid': error
         })}
         placeholder={placeholder}
@@ -26,13 +27,13 @@ const TextFieldGroup = ({
         onChange={onChange}
         disabled={disabled}
       />
-      {info && <small className="pinkText">{info}</small>}
+      {info && <small className="datepicker">{info}</small>}
       {error && <div className="invalid-feedback">{error}</div>}
     </div>
   );
 };
 
-TextFieldGroup.propTypes = {
+DateFieldGroup.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
@@ -43,8 +44,8 @@ TextFieldGroup.propTypes = {
   disabled: PropTypes.string
 };
 
-TextFieldGroup.defaultProps = {
+DateFieldGroup.defaultProps = {
   type: 'text'
 };
 
-export default TextFieldGroup;
+export default DateFieldGroup;

@@ -12,32 +12,37 @@ class CommentItem extends Component {
     const { comment, postId, auth } = this.props;
 
     return (
-      <div className="card card-body mb-3">
-        <div className="row">
-          <div className="col-md-2">
+      <div className="Comment_Wrapper z-depth-2"> 
+          <div>
             <a href="profile.html">
-              <img style={{width: '120px'}}
-                className="rounded-circle d-none d-md-block"
-                src={comment.avatar}
-                alt=""
-              />
+              <img style={{width: '65px'}} className="circle responsive-img" src={comment.avatar} alt="" />
             </a>
+
             <br />
-            <p className="text-center">{comment.name}</p>
           </div>
-          <div className="col-md-10">
-            <p className="lead">{comment.text}</p>
-            {comment.user === auth.user.id ? (
+
+          <div className="Comment_box">
+          
+            
+          <div> <p className="text-center">{comment.name}</p> </div>
+
+            <div> <p className="lead">{comment.text}</p> </div>
+
+            <div>
+          {comment.user === auth.user.id ? (
               <button
                 onClick={this.onDeleteClick.bind(this, postId, comment._id)}
                 type="button"
-                className="btn btn-danger mr-1"
+                className="social_btn" 
               >
-                <i className="fas fa-times" />
+                <i className="material-icons">close</i>
               </button>
             ) : null}
+           </div>
+
+            
           </div>
-        </div>
+
       </div>
     );
   }

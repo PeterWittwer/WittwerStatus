@@ -18,8 +18,9 @@ class ProfileAbout extends Component {
 
     return (
       <div className="row">
-        <div className="col-md-12">
-          <div className="card card-body bg-light mb-3">
+        <div className="col s12 m6">
+        <div className="card indigo accent-3">
+          <div className="card-content white-text">
             <h3 className="text-info">{firstName}'s Bio</h3>
             <p className="lead">
               {isEmpty(profile.bio) ? (
@@ -35,6 +36,7 @@ class ProfileAbout extends Component {
                   {skills}
               </div>
             </div>
+              </div>
           </div>
         </div>
       </div>

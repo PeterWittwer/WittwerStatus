@@ -8,6 +8,7 @@ import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
+import {Button} from 'react-materialize';
 
 
 class EditProfile extends Component {
@@ -193,16 +194,20 @@ class EditProfile extends Component {
 
     return (
       <div className="create-profile">
-        <div className="container">
+        <div className="Container">
           <div className="row">
             <div className="col-md-8 m-auto">
-            <Link to="/dashboard" className="btn btn-light">
-                Go Back
+            <Link to="/dashboard">
+            <Button floating large className='CircleButton' waves='light' icon='arrow_back' />
             </Link>
-              <h1>Edit Your Profile</h1>
+              <h1 className="MainTitle">Edit Your Profile</h1>
               
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
+
+              <div className="Edit_Profile_Wrapper"> 
+
+                <div>
                 <TextFieldGroup
                   placeholder="* Profile Handle"
                   name="handle"
@@ -236,6 +241,9 @@ class EditProfile extends Component {
                   error={errors.website}
                   info="Could be your own website or a company one"
                 />
+                </div>
+
+                <div>
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -251,7 +259,7 @@ class EditProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
+                    HTML,CSS,JavaScript,PHP)"
                 />
                 <TextFieldGroup
                   placeholder="Github Username"
@@ -261,7 +269,7 @@ class EditProfile extends Component {
                   error={errors.githubusername}
                   info="If you want your latest repos and a Github link, include your username"
                 />
-                <TextAreaFieldGroup
+                <TextFieldGroup
                   placeholder="Short Bio"
                   name="bio"
                   value={this.state.bio}
@@ -269,8 +277,12 @@ class EditProfile extends Component {
                   error={errors.bio}
                   info="Tell us a little about yourself"
                 />
+                </div>
 
-                <div className="mb-3">
+                 </div>  {/* END Edit_Profile_Wrapper */}
+
+                <div className="SpaceBetween">
+                  <div>
                   <button
                     type="button"
                     onClick={() => {
@@ -278,18 +290,24 @@ class EditProfile extends Component {
                         displaySocialInputs: !prevState.displaySocialInputs
                       }));
                     }}
-                    className="btn btn-light"
+                    className="btn Button_gray btn-small"
                   >
                     Add Social Network Links
                   </button>
                   <span className="text-muted">Optional</span>
-                </div>
+                
                 {socialInputs}
+                </div>
+
+                <div>
                 <input
                   type="submit"
                   value="Submit"
-                  className="btn btn-info btn-block mt-4"
+                  className="btn Button btn-small"
                 />
+                </div>
+
+                </div>
               </form>
             </div>
           </div>

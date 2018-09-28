@@ -6,28 +6,29 @@ class ProfileHeader extends Component {
     const { profile } = this.props;
 
     return (
-      <div className="row">
-        <div className="col-md-12">
-          <div className="card card-body bg-info text-white mb-3">
-            <div className="row">
-              <div className="col-4 col-md-3 m-auto">
-                <img
-                  className="rounded-circle"
-                  src={profile.user.avatar}
-                  alt=""
-                />
-              </div>
+      <div className="dark_gray z-depth-2" style={{margin: '10px', padding: '10px'}}>
+      <div className="Profiles_Wrapper white-text">
+          <div className="profile_title_box">
+            <div>
+                <img style={{width: '65px'}} className="circle responsive-img" src={profile.user.avatar} alt="" />
             </div>
-            <div className="text-center">
-              <h1 className="display-4 text-center">{profile.user.name}</h1>
-              <p className="lead text-center">
-                {profile.status}{' '}
-                {isEmpty(profile.company) ? null : (
-                  <span>at {profile.company}</span>
-                )}
-              </p>
+
+            <div>
+              <h4 style={{margin : '0px'}}>{profile.user.name}</h4>
+              <p style={{margin : '0px'}}>
+                  {profile.status}{' '}
+                  {isEmpty(profile.company) ? null : (
+                    <span>at {profile.company}</span>
+                  )}
+                </p>
+            </div>
+
+          </div> {/* profile_title_box */}
+            
+          <div>
+              
               {isEmpty(profile.location) ? null : <p>{profile.location}</p>}
-              <p>
+              <p className='socialIcons'>
                 {isEmpty(profile.website) ? null : (
                   <a
                     className="text-white p-2"
@@ -89,9 +90,10 @@ class ProfileHeader extends Component {
                 )}
               </p>
             </div>
+
           </div>
-        </div>
-      </div>
+          </div>
+     
     );
   }
 }

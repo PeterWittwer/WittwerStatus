@@ -1,7 +1,7 @@
 {
-  "name": "mern_shopping_list",
+  "name": "social-site-template",
   "version": "1.0.0",
-  "description": "Shopping list build with MERN stack",
+  "description": "MERN Stack with CRUD, Login Auth, Layout",
   "main": "server.js",
   "scripts": {
     "test": "node server.js",

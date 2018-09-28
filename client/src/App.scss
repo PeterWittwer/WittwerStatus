@@ -1,7 +1,8 @@
 
-// @import "../scss/materialize";
-
-// @import "../scss/_bootstrap"; 
+ @import "../scss/materialize";
+ @import "../scss/colors";
+ @import '../scss/alerts';
+ // @import "../scss/_bootstrap"; 
 // @import "../scss/colors";
 // @import "../scss/spinner"; 
 // @import "../scss/navigations";
@@ -14,6 +15,221 @@
 // @import "../scss/datepicker";
 // @import "../scss/typehead";
 // @import "../scss/socialtheme";
-@import "../scss/genepull/custom";
+// @import "../scss/genepull/custom";
 
 
+.container {
+    margin-top: 30px;
+}
+
+.Container {
+    margin: 30px auto 20px auto;
+    width: 90%;
+}
+
+body {
+    background: rgb(241, 239, 239);
+
+    // background: rgba(45,6,243,1);
+    // background: -moz-linear-gradient(-45deg, rgba(45,6,243,1) 0%, rgba(73,43,240,1) 53%, rgba(149,133,245,1) 100%);
+    // background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(45,6,243,1)), color-stop(53%, rgba(73,43,240,1)), color-stop(100%, rgba(149,133,245,1)));
+    // background: -webkit-linear-gradient(-45deg, rgba(45,6,243,1) 0%, rgba(73,43,240,1) 53%, rgba(149,133,245,1) 100%);
+    // background: -o-linear-gradient(-45deg, rgba(45,6,243,1) 0%, rgba(73,43,240,1) 53%, rgba(149,133,245,1) 100%);
+    // background: -ms-linear-gradient(-45deg, rgba(45,6,243,1) 0%, rgba(73,43,240,1) 53%, rgba(149,133,245,1) 100%);
+    // background: linear-gradient(135deg, rgba(45,6,243,1) 0%, rgba(73,43,240,1) 53%, rgba(149,133,245,1) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d06f3', endColorstr='#9585f5', GradientType=1 );
+
+}  
+
+.Button {
+    @extend .pink, .lighten-1 ;
+    margin: 2px;
+}
+
+.Button_gray {
+    @extend .grey, .darken-2 ;
+
+    margin: 2px;
+}
+
+h1, h2, h3 {
+    @extend .pinkText
+}
+
+h4, h5, h6 {
+    @extend .pink-text, .text-lighten-3 ;
+}
+
+.border_radius {
+    border-radius: 5px;
+}
+
+.Title {
+    text-transform: uppercase;
+    font-size: 17px;
+    @extend .teal-text;
+
+}
+
+.submit_box {
+    display: grid;
+    grid-template-columns:  auto 70px;
+    align-items: center;
+    div {
+        padding: 5px;
+    }
+}
+
+.table_wrapper{
+    background: rgba(32, 30, 41, 0.404);
+    padding: 7px;
+    margin:  10px 0px 20px 0px;
+    color: rgb(114, 113, 113);
+    @extend .z-depth-3;
+    background: rgb(240, 239, 239);
+
+
+}
+
+
+.right_grater {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: space-between;
+       
+}
+
+.MainTitle {
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: solid thin rgb(199, 197, 197);
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+
+}
+
+.CircleButton {
+    @extend .deep-purple , .lighten-2 ;
+}
+
+.SpaceBetween {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.CustomFormInput  {
+    //background: yellow!important;
+    padding: 5px;
+    border-left: solid 2px rgb(182, 39, 170);
+
+}
+
+
+
+.CustomFormInput input::placeholder {
+    color: rgb(128, 126, 126);
+    font-style: italic;
+}
+
+
+.Edit_Profile_Wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
+    // justify-items: center;
+    
+    div {
+        margin: 10px;
+
+    }
+
+}
+
+
+.Profiles_Wrapper {
+    display: grid;
+    grid-template-columns:  350px  auto;
+    align-items: center;
+
+    
+
+}
+
+.profile_title_box {
+    display: grid;
+    grid-template-columns:  80px auto;
+    margin-left: 10px;
+    align-items: center;
+
+   
+}
+
+.socialIcons a{
+    margin: 0px 5px;
+}
+
+.Comment_Wrapper {
+    display: grid;
+    grid-template-columns:  90px  auto;
+    align-items: center;
+    @extend .light_gray;
+    margin: 10px ;
+    padding: 10px 15px ;
+
+}
+
+
+
+.Two_column_fixedLeft {
+    display: grid;
+    grid-template-columns: 390px auto;
+   
+
+}
+
+.Post_Wrapper {
+    display: grid;
+    grid-template-columns: 80px  auto;
+    margin: 10px ;
+    align-items: center;
+    padding: 5px 15px ;
+    div {
+        padding: 5px;
+    }
+
+}
+
+.social_btn {
+    background: none;
+    @extend .pinkText;
+    border: none;
+
+}
+
+.Comment_box {
+    display: grid;
+
+    p {
+        margin: 2px;
+    }
+    div:nth-child(1) {
+        align-items: flex-end;
+        @extend .pinkText;
+        margin-top: 10px;
+    }
+
+    div:nth-child(3) {
+        justify-self: end;
+    }
+}
+
+
+.Landing_wrapper {
+    display: grid;
+    justify-content: center;
+    @extend .light_gray;
+    padding: 30px;
+
+    
+
+}

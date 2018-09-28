@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../../img/Peter-Wittwer-Logo-white.png';
+import logo from '../../img/Peter-Wittwer-Logo.png';
 import  { Link }  from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
@@ -17,27 +17,23 @@ import { connect } from 'react-redux';
         return(
             <div>
 
- <div className="landing">
-    <div className="dark-overlay landing-inner text-light">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <h1 className="display-3 mb-4">
-            </h1>
-            <div className="display-3 mb-4 Mylogo">
-            <img  src={logo} />
+          
+                <div className="container">
+                 <div className="row">
+                  <div className="Landing_wrapper z-depth-2">
+                      <div className="">
+                      {/* <center> <img style={{width:'300px'}}  src={logo} /></center> */}
+                      <center>  <h3>Logo </h3></center>
+                      </div>
+                      <center><p className="lead">
+                      {' '}
+                       Create a Profile, share posts and get help from other Agents</p></center>
+                      <hr />
+                      <Link to="/register" className="btn Button">Sign Up</Link>
+                      <Link to="/login" className="btn Button">Login</Link>
+                </div>
+                </div>
             </div>
-            <p className="lead">
-            {' '}
-             Create a developer profile/portfolio, share posts and get help from other developers</p>
-            <hr />
-            <Link to="/register" className="btn btn-lg btn-info mr-2">Sign Up</Link>
-            <Link to="/login" className="btn btn-lg btn-light">Login</Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
             </div>
         )

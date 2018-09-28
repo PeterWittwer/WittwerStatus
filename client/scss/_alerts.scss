@@ -1,0 +1,14 @@
+
+.alert {
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 10px 0px;
+
+}
+
+.alert_gray {
+    @extend .alert;
+    background-color: rgb(224, 220, 220);
+    @extend .pinkText
+    
+}

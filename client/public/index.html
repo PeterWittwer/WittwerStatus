@@ -13,7 +13,7 @@
 
 
    
-    <title>GP</title>
+    <title>Social</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <!-- Import materialize.css -->
@@ -46,11 +46,39 @@
 
 
 
- <!-- <script>
+ <script>
+   $(document).ready(function() {              
+                Waves.ripple('.waves-effect');
+            });
+
     $(document).ready(function(){
-        $('.tabs').tabs();
-      });
-  </script>   -->
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Apple": null,
+        "Microsoft": null,
+        "Google": 'https://placehold.it/250x250'
+      },
+    });
+  });
+
+
+//SideBar nav script
+(function($){
+  $(function(){
+    $('.sidenav').sidenav();
+  }); 
+})(jQuery); 
+//END SideBar nav script
+
+
+//Date Picker START
+// $(document).ready(function(){
+//     $('.datepicker').datepicker();
+//   });
+  //Date Picker END
+
+
+  </script>  
   
 
   </body>

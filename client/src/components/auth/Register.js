@@ -61,7 +61,7 @@ constructor() {
       <div className="row">
         <div className="col-md-8 m-auto">
           <h1 className="display-4 text-center">Sign Up</h1>
-          <p className="lead text-center">Create Your Wittwer Connect Account</p>
+          <p className="lead text-center">Create Your Account</p>
           
           
           <div className="centered-horizontal">
@@ -100,7 +100,7 @@ constructor() {
                   onChange={this.onChange}
                   error={errors.password2}
                 />
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" className="btn Button" />
           </form>
           </div>
 

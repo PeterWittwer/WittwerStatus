@@ -49,40 +49,28 @@ import { addComment } from '../../actions/postActions';
     const { errors } = this.state;
     
     return (
-        <div className="feed">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <div className="post-form mb-3">
-            <div className="card card-info">
-             
-              <div className="card-header bg-info text-white">
-                Make a Comment...
-              </div>
-              
-              <div className="card-body">
-                <form onSubmit={this.onSubmit}>
-                  <div className="form-group">
-                        <TextAreaFieldGroup 
-                        placehold="Reply to post"
-                        name="text"
-                        value={this.state.text}
-                        onChange={this.onChange}
-                        error={errors.text}
-                        />
+    <div style={{marginTop: '30px'}}>
+      
+                  <form onSubmit={this.onSubmit}>
+                    <div className="submit_box">
 
-                  </div>
-                  <button type="submit" className="btn btn-dark">Submit</button>
-                </form>
-              </div>
+                          <TextAreaFieldGroup 
+                          placehold="Reply to post"
+                          name="text"
+                          value={this.state.text}
+                          onChange={this.onChange}
+                          error={errors.text}
+                          label="Reply to post"
 
-            </div>
-          </div>
+                          />
+                    
 
-            </div>
-        </div>
-    </div>
-</div>
+                    <div>
+                          <button type="submit" className="btn btn-dark Button"> <i class="material-icons">send</i> </button> 
+                    </div>
+                    </div>
+                  </form>
+                </div>
     )
   }
 }

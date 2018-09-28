@@ -14,8 +14,6 @@ class Dashboard extends Component {
     this.props.getCurrentProfile();
   }
 
-
-
   onDeleteClick(e) {
       this.props.deleteAccount();
   }
@@ -33,14 +31,23 @@ class Dashboard extends Component {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
             <div>
-                <p className="lead text-muted"> Welcome  <Link to={`/profile/${profile.handle}`}> {user.name} </Link> </p>
+
+              <div className="right_grater"> 
+                <div><p className="lead text-muted"> Welcome  <Link to={`/profile/${profile.handle}`}> {user.name} </Link> </p> </div>
+                
+                
                 <ProfileActions />
+                
+              </div>
 
                 <Experience experience= {profile.experience}/>
                 <Education education={profile.education} />
 
-                <div> 
-                    <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger"> Delete My Account </button>
+                <div className="SpaceBetween"> 
+                    <div> </div>
+                    <div>
+                    <button onClick={this.onDeleteClick.bind(this)} className="btn grey darken-3" > Delete My Account </button>
+                    </div>
                 </div>
             </div>
         )
@@ -48,9 +55,11 @@ class Dashboard extends Component {
         // User is logged in but has no profile
         dashboardContent = (
           <div>
-            <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a profile, please add some info</p>
-            <Link to="/create-profile" className="btn btn-lg btn-info">
+            <p className="Title">Welcome {user.name}</p>
+            <div className='alert_gray'>
+            <p>You have not yet setup a profile, please add some info.</p>
+            </div>
+            <Link to="/create-profile" className="btn btn-lg btn-info Button">
               Create Profile
             </Link>
           </div>
@@ -60,10 +69,10 @@ class Dashboard extends Component {
 
     return (
       <div className="dashboard">
-        <div className="container">
+        <div className="Container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4">Dashboard</h1>
+              <h1 className="MainTitle">Dashboard</h1>
               {dashboardContent}
             </div>
           </div>

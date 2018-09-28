@@ -46,41 +46,35 @@ import { addPost } from '../../actions/postActions';
   render() {
 
     const { errors } = this.state;
-    
+
+   
+
     return (
-        <div className="feed">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <div className="post-form mb-3">
-            <div className="card card-info">
-             
-              <div className="card-header bg-info text-white">
-                Say Somthing...
-              </div>
-              
-              <div className="card-body">
+  <div className="feed">
+
+
+        
                 <form onSubmit={this.onSubmit}>
-                  <div className="form-group">
-                        <TextAreaFieldGroup 
+                    <div className="submit_box">
+                      <TextAreaFieldGroup 
                         placehold="Create a post"
                         name="text"
                         value={this.state.text}
                         onChange={this.onChange}
                         error={errors.text}
+                        label="Say Something"
                         />
 
-                  </div>
-                  <button type="submit" className="btn btn-dark">Submit</button>
+                        <div>
+                          <button type="submit" className="btn btn-dark Button"> <i class="material-icons">send</i> </button> 
+                        </div>
+                    </div>
                 </form>
-              </div>
 
-            </div>
-          </div>
+             
 
-            </div>
-        </div>
-    </div>
+               
+ 
 </div>
     )
   }

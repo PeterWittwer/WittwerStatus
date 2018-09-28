@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import { connect} from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
+import {Navbar, NavItem} from 'react-materialize';
 
 
-class Navbar extends Component {
+class Navbars extends Component {
   onLogoutClick(e) {
     e.preventDefault();
     this.props.clearCurrentProfile();
@@ -21,22 +22,19 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="right hide-on-med-and-down">
       
-        <li>
-        <Link className="nav-item" to="/genepull">
-            GenePull
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/shipments">
-            Shipments
+      <li className="nav-item">
+          <Link className="nav-link" to="/profiles">
+            Agents
           </Link>
         </li>
 
        <li className="nav-item">
           <Link className="nav-link" to="/feed">
-            Post Feed
+            Conversations
           </Link>
         </li>
+
+        
 
         <li className="nav-item">
           <Link className="nav-link" to="/dashboard">
@@ -59,8 +57,8 @@ class Navbar extends Component {
     );
 
     const guestLinks = (
-      <div className="nav-wrapper"> 
-      <ul className="">
+      <div> 
+      <ul  className="right hide-on-med-and-down">
         <li className="nav-item">
           <Link className="nav-link" to="/register">
             Sign Up
@@ -70,38 +68,53 @@ class Navbar extends Component {
           <Link className="nav-link" to="/login">
             Login
           </Link>
-         
         </li>
-        <li>
-          <Link className="nav-link" to="/genepull" style={{color: 'red'}}>
-            GenePull
-          </Link>
-          </li>
-
       </ul>
+
+      
+
       </div>
     );
 
 
         return(
-          <div className="navbar-fixed">
-          <nav className="dark_oppacity_b">
-              <div className="nav-wrapper">
-                <a href="#!" className="brand-logo">GenePull</a>
+          <div>
+            <ul className="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+          </ul>
+
+          <div class="navbar-fixed">
+
+
+
+          <nav className="grey darken-3">
+               <div className="nav-wrapper">
+                <a style={{paddingLeft: '10px'}} href="/dashboard" className="brand-logo">Coms</a>
+                <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                 {isAuthenticated ? authLinks : guestLinks}
+               </div>
+          </nav>
 
-              </div>
-            </nav>
-          </div>
+             
 
 
+            </div>
+
+
+           
+
+            </div>
+          
         )
     }
 }
 
 
 
-Navbar.propTypes = {
+Navbars.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 }
@@ -111,4 +124,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps, { logoutUser, clearCurrentProfile })(Navbar);
+export default connect(mapStateToProps, { logoutUser, clearCurrentProfile })(Navbars);
