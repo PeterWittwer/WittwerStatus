@@ -61,7 +61,7 @@ class PostItem extends Component {
                   type="button"
                   className="social_btn"
                 >
-                  <i class="material-icons">thumb_down</i>
+                  <i className="material-icons">thumb_down</i>
                 </button>
                 <Link to={`/post/${post._id}`} className="social_btn">
                 <i className="material-icons">question_answer</i>
