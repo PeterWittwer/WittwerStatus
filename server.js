@@ -2,12 +2,11 @@ const express = require('express');
  const mongoose = require('mongoose');
 const bodyParser = require('body-parser'); // will allow me to take requests from the body, such as post requests(e.g.)
 const passport = require('passport');
+const path = require('path');
 
-const items = require('./routes/api/items');
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
-const tran_shipment = require('./routes/api/Tran_shipments');
 
 
 const app = express();
@@ -32,14 +31,24 @@ app.use(passport.initialize());
 // Passport Config
 require('./config/passport')(passport);
 
- //Use Routes
- app.use('/api/items', items);
- //app.use('/api/individual-shipment', items);  mounting the oneShipment route to this path
+
 
  app.use('/api/users', users);
  app.use('/api/profile', profile);
  app.use('/api/posts', posts);
- app.use('/api/shipments', tran_shipment);
+
+
+
+  
+
+  // Server static assets if in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+  }
 
 
 const port = process.env.PORT || 5000;
