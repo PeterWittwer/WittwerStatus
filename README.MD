@@ -1,2 +1,2 @@
-<h2> SocialTemplate</h2>
-<p> This is a socialTemplate the next generation of networking</p>
+<h2> WittwerStatus</h2>
+<p> WittwerStatus is an internal Wittwer communication network that manages Agents and company wide shipments/projects status</p>

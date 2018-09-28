@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../../img/Peter-Wittwer-Logo.png';
+import logo from '../../img/WittwerStatus-logo.png';
 import  { Link }  from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
@@ -22,8 +22,7 @@ import { connect } from 'react-redux';
                  <div className="row">
                   <div className="Landing_wrapper z-depth-2">
                       <div className="">
-                      {/* <center> <img style={{width:'300px'}}  src={logo} /></center> */}
-                      <center>  <h3>Logo </h3></center>
+                      <center> <img style={{width:'300px'}}  src={logo} /></center>
                       </div>
                       <center><p className="lead">
                       {' '}

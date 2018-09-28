@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import  { Link }  from 'react-router-dom';
+import logo from '../../img/WittwerStatus-logo.png';
 import PropTypes from 'prop-types';
 import { connect} from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
@@ -92,7 +93,7 @@ class Navbars extends Component {
 
           <nav className="grey darken-3">
                <div className="nav-wrapper">
-                <a style={{paddingLeft: '10px'}} href="/dashboard" className="brand-logo">Coms</a>
+                <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo"><img style={{width:'140px'}}  src={logo} /></a>
                 <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                 {isAuthenticated ? authLinks : guestLinks}
                </div>
