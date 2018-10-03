@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import {Button, Row, Input} from 'react-materialize';
+import { Input} from 'react-materialize';
 
 const TextAreaFieldGroup = ({
   name,

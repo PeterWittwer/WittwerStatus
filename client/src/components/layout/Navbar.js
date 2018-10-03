@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { connect} from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
-import {Navbar, NavItem} from 'react-materialize';
 
 
 class Navbars extends Component {
@@ -87,13 +86,13 @@ class Navbars extends Component {
             <li><a href="mobile.html">Mobile</a></li>
           </ul>
 
-          <div class="navbar-fixed">
+          <div className="navbar-fixed">
 
 
 
           <nav className="grey darken-3">
                <div className="nav-wrapper">
-                <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo"><img style={{width:'140px'}}  src={logo} /></a>
+                <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo"><img style={{width:'140px'}} atl="logo"  src={logo} /></a>
                 <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                 {isAuthenticated ? authLinks : guestLinks}
                </div>

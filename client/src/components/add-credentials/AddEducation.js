@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link, withRouter} from 'react-router-dom';
 import  TextFieldGroup  from '../common/TextFieldGroup';
 import  TextAreaFieldGroup  from '../common/TextAreaFieldGroup';
-import DateFieldGroup from '../common/DateFieldGroup';
 import {Button} from 'react-materialize';
 
 import { connect } from 'react-redux';

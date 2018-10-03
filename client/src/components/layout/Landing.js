@@ -22,7 +22,7 @@ import { connect } from 'react-redux';
                  <div className="row">
                   <div className="Landing_wrapper z-depth-2">
                       <div className="">
-                      <center> <img style={{width:'300px'}}  src={logo} /></center>
+                      <center> <img style={{width:'300px'}} alt='logo'  src={logo} /></center>
                       </div>
                       <center><p className="lead">
                       {' '}

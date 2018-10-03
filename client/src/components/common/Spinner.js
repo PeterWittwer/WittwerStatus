@@ -1,6 +1,6 @@
 import React from 'react'
 import spinner from './spinner.gif';
-import {Row, Col, ProgressBar, Preloader} from 'react-materialize'
+import {Row, Col, ProgressBar} from 'react-materialize'
 
 export default  () => {
   return (

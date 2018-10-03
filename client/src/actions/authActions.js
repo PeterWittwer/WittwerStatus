@@ -57,6 +57,4 @@ export const setCurrentUser = decoded => {
     setAuthToken(false);
     // Set current user to {} which will set isAuthenticated to false
     dispatch(setCurrentUser({}));
-  };
-
-
+};

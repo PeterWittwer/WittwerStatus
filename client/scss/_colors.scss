@@ -13,7 +13,14 @@
     background: rgb(62, 62, 63);
 }
 
-.pinkText {
-    color: #ec407a;
+.PrimaryBackground {
+   //@at-root @extend .pink, .lighten-1 ;
+    background: #00aeef;
+}
+
+.PrimaryText {
+    //color: #ec407a;
+    color: #00aeef;
+
 }
 

@@ -2,6 +2,9 @@
  @import "../scss/materialize";
  @import "../scss/colors";
  @import '../scss/alerts';
+ @import '../scss/themeA';
+ @import '../scss/dashboard';
+
  // @import "../scss/_bootstrap"; 
 // @import "../scss/colors";
 // @import "../scss/spinner"; 
@@ -18,15 +21,6 @@
 // @import "../scss/genepull/custom";
 
 
-.container {
-    margin-top: 30px;
-}
-
-.Container {
-    margin: 30px auto 20px auto;
-    width: 90%;
-}
-
 body {
     background: rgb(241, 239, 239);
 
@@ -41,24 +35,17 @@ body {
 
 }  
 
-.Button {
-    @extend .pink, .lighten-1 ;
-    margin: 2px;
+
+.container {
+    margin-top: 30px;
 }
 
-.Button_gray {
-    @extend .grey, .darken-2 ;
-
-    margin: 2px;
+.Container {
+    margin: 30px auto 20px auto;
+    width: 90%;
 }
 
-h1, h2, h3 {
-    @extend .pinkText
-}
 
-h4, h5, h6 {
-    @extend .pink-text, .text-lighten-3 ;
-}
 
 .border_radius {
     border-radius: 5px;
@@ -81,15 +68,77 @@ h4, h5, h6 {
 }
 
 .table_wrapper{
-    background: rgba(32, 30, 41, 0.404);
     padding: 7px;
     margin:  10px 0px 20px 0px;
     color: rgb(114, 113, 113);
-    @extend .z-depth-3;
-    background: rgb(240, 239, 239);
+    //@extend .z-depth-3;
+    //background: rgb(240, 239, 239);
 
 
 }
+
+
+
+.Button {
+    @extend .PrimaryBackground ;
+    margin: 2px;
+}
+
+.Custom_sm_btn {
+    @extend .PrimaryBackground ;
+    margin: 3px;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: white;
+
+        i {
+            font-size: 13px;
+        }
+
+}
+
+.Button_gray {
+    @extend .grey, .darken-2 ;
+
+    margin: 2px;
+}
+
+h1, h2, h3 {
+    @extend .PrimaryText
+}
+
+h4, h5, h6 {
+    @extend .light-blue-text, .text-accent-4 ;
+}
+
+
+.CircleButton {
+    @extend .deep-purple , .lighten-2 ;
+}
+
+.CustomFormInput  {
+    //background: yellow!important;
+    padding: 5px;
+    border-left: solid 2px rgb(39, 182, 151);
+
+}
+
+
+.CustomFormInput input::placeholder {
+    color: rgb(128, 126, 126);
+    font-style: italic;
+}
+
+
+.social_btn {
+    background: none;
+    @extend .PrimaryText;
+    border: none;
+
+}
+
+
 
 
 .right_grater {
@@ -108,9 +157,7 @@ h4, h5, h6 {
 
 }
 
-.CircleButton {
-    @extend .deep-purple , .lighten-2 ;
-}
+
 
 .SpaceBetween {
     display: flex;
@@ -118,19 +165,7 @@ h4, h5, h6 {
 
 }
 
-.CustomFormInput  {
-    //background: yellow!important;
-    padding: 5px;
-    border-left: solid 2px rgb(182, 39, 170);
 
-}
-
-
-
-.CustomFormInput input::placeholder {
-    color: rgb(128, 126, 126);
-    font-style: italic;
-}
 
 
 .Edit_Profile_Wrapper {
@@ -199,12 +234,7 @@ h4, h5, h6 {
 
 }
 
-.social_btn {
-    background: none;
-    @extend .pinkText;
-    border: none;
 
-}
 
 .Comment_box {
     display: grid;
@@ -214,7 +244,7 @@ h4, h5, h6 {
     }
     div:nth-child(1) {
         align-items: flex-end;
-        @extend .pinkText;
+        @extend .PrimaryText;
         margin-top: 10px;
     }
 
@@ -233,3 +263,10 @@ h4, h5, h6 {
     
 
 }
+
+
+
+
+
+
+

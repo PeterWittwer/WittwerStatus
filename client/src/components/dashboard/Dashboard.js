@@ -8,6 +8,9 @@ import ProfileActions from './ProfileActions';
 import Experience from './Experience';
 import Education from './Education';
 
+import BarChart from './barchart';
+import PieChart from './piechart';
+import LineChart from './linechart';
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -32,23 +35,80 @@ class Dashboard extends Component {
         dashboardContent = (
             <div>
 
-              <div className="right_grater"> 
-                <div><p className="lead text-muted"> Welcome  <Link to={`/profile/${profile.handle}`}> {user.name} </Link> </p> </div>
-                
-                
-                <ProfileActions />
-                
-              </div>
+                  <div className="SpaceBetween"> 
+                    <div> 
+                    <span className="lead text-muted"> Welcome  <Link to={`/profile/${profile.handle}`}> {user.name} </Link> </span> 
+                    </div>
+                    <div> 
+                    <ProfileActions />
+                    </div>
+                  </div>
 
-                <Experience experience= {profile.experience}/>
-                <Education education={profile.education} />
+          <div className="Dashboard_Wrapper"> 
+                 
+            <div className="card sites">
+                <div className="Column_grid_3"> 
+                  <div> <center> <i className="material-icons">traffic</i><br/> Wittwer Online </center> </div>
+                  <div> <center> <i className="material-icons">compare_arrows</i><br/>Wittwer Connect </center> </div>
+                  <div> <center> <i className="material-icons">account_balance</i><br/>Warehousing </center> </div>
+                  <div> <center> <i className="material-icons">waves</i><br/>Ocean Track </center> </div>
+              </div>
+            </div>
+
+            <div className="card experience"> 
+            <Experience experience= {profile.experience}/> 
+            </div>
+
+
+            <div className="card barchart"> 
+            <BarChart/> 
+            </div>
+
+            <div className="card education">
+            <Education education={profile.education} /> 
+            </div>
+
+            
+
+
+            <div className="card linechart"> 
+            <LineChart/> 
+            </div>
+
+
+            <div className="card piechart"> 
+            <PieChart />  
+            </div>
+
+
+              <div className="card"> 
+                  <h4>7</h4> 
+             </div>
+             
+              <div className="card"> 
+                  <h4>8</h4> 
+             </div>
+              <div className="card"> 
+                  <h4>9</h4> 
+             </div>
+              <div className="card"> 
+                  <h4>10</h4> 
+             </div>
+              <div className="card"> 
+                  <h4>11</h4> 
+             </div>
+             
+             
+              </div>  {/* END Dashboard_Wrapper  */}
 
                 <div className="SpaceBetween"> 
                     <div> </div>
-                    <div>
-                    <button onClick={this.onDeleteClick.bind(this)} className="btn grey darken-3" > Delete My Account </button>
+                    <div><button onClick={this.onDeleteClick.bind(this)} className="btn grey darken-3">Delete My Account </button>
                     </div>
                 </div>
+
+
+
             </div>
         )
       } else {
@@ -68,16 +128,11 @@ class Dashboard extends Component {
     }
 
     return (
-      <div className="dashboard">
         <div className="Container">
-          <div className="row">
-            <div className="col-md-12">
               <h1 className="MainTitle">Dashboard</h1>
               {dashboardContent}
-            </div>
-          </div>
         </div>
-      </div>
+        
     );
   }
 }

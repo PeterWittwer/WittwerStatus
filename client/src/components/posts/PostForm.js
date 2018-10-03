@@ -62,7 +62,7 @@ import { addPost } from '../../actions/postActions';
                         value={this.state.text}
                         onChange={this.onChange}
                         error={errors.text}
-                        label="Say Something"
+                        label="start topic"
                         />
 
                         <div>
