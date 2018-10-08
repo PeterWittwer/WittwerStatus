@@ -28,7 +28,9 @@ class EditProfile extends Component {
       linkedin: '',
       youtube: '',
       instagram: '',
-      errors: {}
+      billedShipments: '',
+      unbilledShipments: '',
+      errors: {} 
     };
 
     this.onChange = this.onChange.bind(this);
@@ -59,6 +61,10 @@ class EditProfile extends Component {
         ? profile.githubusername
         : '';
       profile.bio = !isEmpty(profile.bio) ? profile.bio : '';
+
+      profile.billedShipments = !isEmpty(profile.billedShipments) ? profile.billedShipments : '';
+      profile.unbilledShipments = !isEmpty(profile.unbilledShipments) ? profile.unbilledShipments : '';
+      
       profile.social = !isEmpty(profile.social) ? profile.social : {};
       profile.twitter = !isEmpty(profile.social.twitter)
         ? profile.social.twitter
@@ -76,6 +82,9 @@ class EditProfile extends Component {
         ? profile.social.instagram
         : '';
 
+       
+
+
       // Set component fields state
       this.setState({
         handle: profile.handle,
@@ -90,7 +99,9 @@ class EditProfile extends Component {
         facebook: profile.facebook,
         instagram: profile.instagram,
         linkedin: profile.linkedin,
-        youtube: profile.youtube
+        youtube: profile.youtube,
+        billedShipments: profile.billedShipments,
+        unbilledShipments: profile.unbilledShipments
       });
     }
   }
@@ -112,7 +123,9 @@ class EditProfile extends Component {
       facebook: this.state.facebook,
       linkedin: this.state.linkedin,
       youtube: this.state.youtube,
-      instagram: this.state.instagram
+      instagram: this.state.instagram,
+      billedShipments: this.state.billedShipments,
+      unbilledShipments: this.state.unbilledShipments
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -276,6 +289,26 @@ class EditProfile extends Component {
                   error={errors.bio}
                   info="Tell us a little about yourself"
                 />
+
+                <TextFieldGroup
+                  placeholder="Billed Total"
+                  name="billedShipments"
+                  value={this.state.billedShipments}
+                  onChange={this.onChange}
+                  error={errors.billedShipments}
+                  info="Total $ Billed"
+                />
+
+                <TextFieldGroup
+                  placeholder="UnBilled Total"
+                  name="unbilledShipments"
+                  value={this.state.unbilledShipments}
+                  onChange={this.onChange}
+                  error={errors.unbilledShipments}
+                  info="Total $ UnBilled"
+                />
+
+
                 </div>
 
                  </div>  {/* END Edit_Profile_Wrapper */}

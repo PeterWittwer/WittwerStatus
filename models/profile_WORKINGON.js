@@ -63,7 +63,7 @@ const ProfileSchema = new Schema({
         type: String
       }
     }
-  ], 
+  ],
   education: [
     {
       school: {
@@ -114,7 +114,29 @@ const ProfileSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+
+  billedShipments: {
+    type: Number
+  },
+  unbilledShipments: {
+    type: Number
+  },
+
+  chartData: {
+    labels: {type: [String]},
+    datasets: [{
+      label: {type: String},
+      data: {type: [Number]}
+      ,
+      backgroundColor: {type: [String]}
+    }]
   }
+
+
+
+    
+
 });
 
 module.exports = Profile = mongoose.model('profile', ProfileSchema);

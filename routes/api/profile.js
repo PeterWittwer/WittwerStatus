@@ -80,7 +80,6 @@ router.get('/handle/:handle', (req, res) => {
           errors.noprofile = 'There is no profile for this user';
           res.status(404).json(errors);
         }
-  
         res.json(profile);
       })
       .catch(err => res.status(404).json(err));
@@ -142,6 +141,10 @@ router.post(
       if (req.body.bio) profileFields.bio = req.body.bio;
       if (req.body.status) profileFields.status = req.body.status;
       if (req.body.githubusername) profileFields.githubusername = req.body.githubusername;
+      // if (req.body.billedShipments) profileFields.billedShipments = req.body.billedShipments;
+      // if (req.body.unbilledShipments) profileFields.unbilledShipments = req.body.unbilledShipments;
+
+
       // Skills - Spilt into array
       if (typeof req.body.skills !== 'undefined') {
         profileFields.skills = req.body.skills.split(',');
@@ -154,6 +157,9 @@ router.post(
       if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
       if (req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
       if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
+      
+      
+
   
       Profile.findOne({ user: req.user.id }).then(profile => {
         if (profile) {

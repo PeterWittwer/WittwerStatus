@@ -28,7 +28,7 @@ class LineChart extends React.Component {
 
 					],
                     borderColor: "#00aeef",
-                     backgroundColor: '#F3097F',
+                    backgroundColor: '#F3097F',
 				}]
 			}
 		}
@@ -50,21 +50,21 @@ render() {
 				title: {
 					display: true,
 					text: 'Profits',
-                    fontSize: 20,
-
+					fontSize: 20,
+					fontColor: '#00aeef'
                 },
 				legend: {
 					display: true,
 					position: 'right',
 					labels: {
-						fontColor: '#282828'
+						fontColor: '#00aeef'
 					}
 				},
 				scales: {
 					yAxes: [{
 
 						ticks: {
-							fontColor: "#282828",
+							fontColor: "#00aeef",
 							fontSize: 14,
                             beginAtZero: true,
 
@@ -74,7 +74,7 @@ render() {
 					xAxes: [{
 
 						ticks: {
-							fontColor: "#282828",
+							fontColor: "#00aeef",
 							fontSize: 14,
 							stepSize: 1,
                             beginAtZero: true,

@@ -7,10 +7,10 @@ class CommentItem extends Component {
   onDeleteClick(postId, commentId) {
     this.props.deleteComment(postId, commentId);
   }
-
+ 
   render() {
     const { comment, postId, auth } = this.props;
-
+ 
     return (
       <div className="Comment_Wrapper z-depth-2"> 
           <div>

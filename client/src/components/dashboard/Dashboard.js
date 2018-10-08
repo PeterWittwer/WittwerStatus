@@ -46,14 +46,18 @@ class Dashboard extends Component {
 
           <div className="Dashboard_Wrapper"> 
                  
-            <div className="card sites">
-                <div className="Column_grid_3"> 
-                  <div> <center> <i className="material-icons">traffic</i><br/> Wittwer Online </center> </div>
-                  <div> <center> <i className="material-icons">compare_arrows</i><br/>Wittwer Connect </center> </div>
-                  <div> <center> <i className="material-icons">account_balance</i><br/>Warehousing </center> </div>
-                  <div> <center> <i className="material-icons">waves</i><br/>Ocean Track </center> </div>
-              </div>
+        <div className="card sites">
+            <h5> Sites </h5>
+            <div className="Link_box"> 
+              <div> <a target="_blank" href="http://www.wittweronline.com"> <center> <i className="material-icons">traffic</i><br/> Wittwer Online </center></a> </div>
+              <div> <a target="_blank" href="http://www.wittwerconnect.com"> <center> <i className="material-icons">compare_arrows</i><br/>Wittwer Connect </center> </a></div>
+              <div> <a target="_blank" href="http://www.wittweronline.com"> <center> <i className="material-icons">account_balance</i><br/>Warehousing </center> </a></div>
+              <div> <a target="_blank" href="http://www.ocean-track.com"> <center> <i className="material-icons">waves</i><br/>Ocean Track </center> </a></div>
+              <div> <a target="_blank" href="http://www.wittweronline.com"> <center> <i className="material-icons">book</i><br/>Client Information </center> </a></div>
+              <div> <a target="_blank" href="http://www.wittweronline.com"> <center> <i className="material-icons">book</i><br/>Client Information </center></a> </div>
+              <div> <a target="_blank" href="http://www.wittweronline.com"> <center> <i className="material-icons">book</i><br/>Client Information </center> </a></div>
             </div>
+        </div>
 
             <div className="card experience"> 
             <Experience experience= {profile.experience}/> 
@@ -81,7 +85,7 @@ class Dashboard extends Component {
             </div>
 
 
-              <div className="card"> 
+              {/* <div className="card"> 
                   <h4>7</h4> 
              </div>
              
@@ -96,7 +100,7 @@ class Dashboard extends Component {
              </div>
               <div className="card"> 
                   <h4>11</h4> 
-             </div>
+             </div> */}
              
              
               </div>  {/* END Dashboard_Wrapper  */}

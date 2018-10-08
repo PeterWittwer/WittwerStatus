@@ -46,14 +46,14 @@ render() {
 				title: {
 					display: true,
 					text: 'Total Clients by Location',
-                    fontSize: 20,
-
+					fontSize: 20,
+					fontColor: '#00aeef'
                 },
 				legend: {
 					display: true,
 					position: 'bottom',
 					labels: {
-						fontColor: '#282828'
+						fontColor: '#00aeef'
 					}
 				}
 			}} 

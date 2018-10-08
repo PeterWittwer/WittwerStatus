@@ -26,7 +26,7 @@ class Navbars extends Component {
           <Link className="nav-link" to="/profiles">
             Agents
           </Link>
-        </li>
+        </li> 
 
        <li className="nav-item">
           <Link className="nav-link" to="/feed">
@@ -59,6 +59,11 @@ class Navbars extends Component {
     const guestLinks = (
       <div> 
       <ul  className="right hide-on-med-and-down">
+      <li className="nav-item">
+          <Link className="nav-link" to="/profiles">
+            Agents
+          </Link>
+        </li> 
         <li className="nav-item">
           <Link className="nav-link" to="/register">
             Sign Up
@@ -80,10 +85,11 @@ class Navbars extends Component {
         return(
           <div>
             <ul className="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
+            <li><a href="sass.html">Sample Sidebar</a></li>
+            {/* <li><a href="sass.html">Sass</a></li>
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="mobile.html">Mobile</a></li> */}
           </ul>
 
           <div className="navbar-fixed">
@@ -92,7 +98,9 @@ class Navbars extends Component {
 
           <nav className="grey darken-3">
                <div className="nav-wrapper">
-                <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo"><img style={{width:'140px'}} atl="logo"  src={logo} /></a>
+                {/* <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo"><img style={{width:'140px'}} atl="logo"  src={logo} /></a> */}
+                <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo">Skynet</a>
+
                 <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                 {isAuthenticated ? authLinks : guestLinks}
                </div>

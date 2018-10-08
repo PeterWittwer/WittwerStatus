@@ -2,7 +2,7 @@ import React from "react";
 import { Bar } from 'react-chartjs-2'; 
   
 class BarChart extends React.Component {
-
+ 
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -11,19 +11,12 @@ class BarChart extends React.Component {
 				datasets: [{
 					label: 'Currency',
 					data: [
-						200,
-						100,
-						60,
-						160,
-					
+						290,
+						170,
+						210,
+						260,
 					],
 					backgroundColor: [
-						// '#41CDD3',
-						// '#20E1EA',
-						// '#0FA0A3',
-						// '#41A1B5',
-						// '#306571',
-						// '#98C1C3'
 						'#F3097F',
 						'#F783BE',
 						'#AB065A',
@@ -31,16 +24,19 @@ class BarChart extends React.Component {
 						'#CB34A9',
 						'#A95997'
 					]
-
 				}]
 			}
 		}
     }
-    
+
+	
+	// unbilledShipments, billedShipments
 
 
- 	
 render() {
+
+
+
 
     return ( 
             <div>
@@ -53,20 +49,21 @@ render() {
 				title: {
 					display: true,
 					text: 'Unbiled Shipments in $',
-					fontSize: 20
+					fontSize: 20,
+					fontColor: '#00aeef'
 				},
 				legend: {
 					display: true,
 					position: 'right',
 					labels: {
-						fontColor: '#282828'
+						fontColor: '#00aeef'
 					}
 				},
 
 				scales: {
 					yAxes: [{
 						ticks: {
-							fontColor: "#282828",
+							fontColor: "#00aeef",
 							fontSize: 14,
 							beginAtZero: true
 
@@ -74,7 +71,7 @@ render() {
 					}],
 					xAxes: [{
 						ticks: {
-							fontColor: "#282828",
+							fontColor: "#00aeef",
 							fontSize: 14,
 							stepSize: 1,
 							beginAtZero: true

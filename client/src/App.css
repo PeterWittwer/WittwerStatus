@@ -2033,7 +2033,7 @@ a {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
 
 /* 6dp elevation modified*/
-.z-depth-2, .Column_grid_3 div {
+.z-depth-2, .Link_box div {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
 
 /* 12dp elevation modified*/
@@ -6569,21 +6569,25 @@ input[type=range]::-ms-thumb {
 .piechart {
   grid-column-end: span 2; }
 
-.Column_grid_3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 60px;
-  grid-gap: 5px;
+.Link_box {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 10px; }
-  .Column_grid_3 div {
-    display: grid;
+  .Link_box div {
+    display: flex;
     background: #ececec;
     color: #00aeef;
     padding: 3px;
     line-height: 13px;
-    align-items: center; }
-    .Column_grid_3 div i {
+    align-items: center;
+    height: 70px;
+    margin: 5px;
+    width: 70px; }
+    .Link_box div i {
       font-size: 18px; }
+
+.Link_box div:hover {
+  background: #282828; }
 
 #left_dashboard_column {
   display: grid;

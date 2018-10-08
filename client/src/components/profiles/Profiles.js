@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
 import ProfileItem from './Profileitem';
 import { getProfiles } from '../../actions/profileActions';
-
+ 
 class Profiles extends Component {
   componentDidMount() {
     this.props.getProfiles();
@@ -32,7 +32,7 @@ class Profiles extends Component {
           <div className="row">
             <div className="col-md-12">
               <h3 className="MainTitle">AGENT PROFILES</h3>
-              <p className="white-text">
+              <p className="black-text">
                 Browse and connect with other Agents
               </p>
               {profileItems}
