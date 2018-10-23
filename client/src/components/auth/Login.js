@@ -82,7 +82,7 @@ class Login extends Component {
                         {errors.password && (<div className="invalid-feedback"> {errors.password} </div> )}
 
                         </div>
-                        <input type="submit" className="btn Button" />
+                        <input type="submit" className="btn Button" value="Submit" />
                     </form>
                     </center>
                     </div>
