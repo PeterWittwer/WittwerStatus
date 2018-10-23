@@ -35,7 +35,7 @@ class Experience extends Component {
     return (
       <div>
         <div className="table_wrapper">
-        <h5>Experience Credentials</h5>
+        <h5>Clients</h5>
         <table className="highlight">
           <thead>
             <tr>

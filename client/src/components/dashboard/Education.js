@@ -35,7 +35,7 @@ class Education extends Component {
     return (
       <div>
         <div className="table_wrapper">
-        <h5>Education Credentials</h5>
+        <h5>Prospects</h5>
 
         <table className="highlight custom-table">
 

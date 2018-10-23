@@ -98,8 +98,8 @@ class Navbars extends Component {
 
           <nav className="grey darken-3">
                <div className="nav-wrapper">
-                {/* <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo"><img style={{width:'140px'}} atl="logo"  src={logo} /></a> */}
-                <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo">Skynet</a>
+                <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo"><img style={{width:'140px'}} atl="logo"  src={logo} /></a>
+                {/* <a style={{paddingLeft: '10px', paddingTop: '5px'}} href="/dashboard" className="brand-logo">Skynet</a> */}
 
                 <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                 {isAuthenticated ? authLinks : guestLinks}
